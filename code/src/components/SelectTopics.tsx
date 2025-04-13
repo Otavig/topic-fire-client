@@ -1,14 +1,14 @@
 import Select from '@mui/joy/Select';
 import Option from '@mui/joy/Option';
 
-interface Opcao {
+interface Option {
   id: number;
   name: string;
 }
 
 interface InputSearchProps {
   place?: string;
-  options: Opcao[];
+  options: Option[];
 }
 
 export default function InputSearch({ place, options }: InputSearchProps) {

@@ -21,6 +21,7 @@ export default function InputSearch({ msg, place, action }: InputSearchProps) {
 
     return (
         <Input 
+            style={{width: "50em"}}
             placeholder={place}
             value={value}
             endDecorator={<Button

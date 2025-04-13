@@ -3,15 +3,17 @@ import Card from '@mui/joy/Card';
 import Typography from '@mui/joy/Typography';
 import Button from "@mui/joy/Button";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubbleOutline";
-import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import {CardTopicShow} from './CardTypeTopics';
+// import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 
 interface CardTopicsProps {
     msg?: string;
     repliesCount?: number;
-    participantsCount?: number;
+    topics?: string[];
+    // participantsCount?: number;
 }
 
-export default function CardTopics({ msg, repliesCount = 0, participantsCount = 0 }: CardTopicsProps) {
+export default function CardTopics({ msg, repliesCount = 0, topics }: CardTopicsProps) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -42,10 +44,15 @@ export default function CardTopics({ msg, repliesCount = 0, participantsCount = 
                                 <ChatBubbleIcon fontSize="small" />
                                 <span>{repliesCount}</span>
                             </div>
-
+                            {/* 
                             <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
                                 <PeopleAltIcon fontSize="small" />
                                 <span>{participantsCount}</span>
+                            </div> */}
+                            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                                {topics?.map((topic, index) => (
+                                    <CardTopicShow key={index} msg={topic} />
+                                ))}
                             </div>
                         </div>
 

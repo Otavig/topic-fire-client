@@ -9,7 +9,7 @@ body {
 
 .main {
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 }
 
 .head {
@@ -18,11 +18,6 @@ body {
     justify-content: center;
     gap: 10px;
     margin: 20px 10px 50px 10px;
-}
-
-.MuiInput-variantOutlined {
-    width: 50em;
-    padding: 2px;
 }
 
 .custom-alert {
@@ -49,6 +44,7 @@ body {
 }
 
 .title-container {
+    width: 80%;
     display: flex;
     gap: 30px;
     margin-left: 10vw;
@@ -61,5 +57,6 @@ body {
 @media (max-width: 750px)  {
     .title {
         font-size: 20px;
+        word-break: break-all;
     }
 }
